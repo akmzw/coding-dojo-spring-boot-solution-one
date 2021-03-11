@@ -1,0 +1,50 @@
+# //TODO: Use Jasypt for sensitive data encrypion  ENC(key)
+
+spring:
+    application:
+        name: weather
+    h2:
+        console:
+            enabled: true
+            path: /h2
+    datasource:
+        url: jdbc:h2:file:~/test
+        username: sa
+        password:
+        driverClassName: org.h2.Driver
+    jpa:
+        hibernate:
+            ddl-auto: validate
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.PostgreSQLDialect
+                jdbc:
+                    lob:
+                        non_contextual_creation: true
+
+
+
+
+    h2:
+        console:
+            enabled=true:
+                spring:
+                    h2:
+                        console:
+                            path=/h2:
+
+
+
+    spring.datasource.url=jdbc:h2:file:~/test
+    spring.datasource.username=sa
+    spring.datasource.password=
+    spring.datasource.driverClassName=org.h2.Driver
+
+
+
+config:
+    openWeather:
+        apiKey: "c0d69d81f737f6ac239d118adda1303a"
+        url: http://api.openweathermap.org/data/2.5/weather?appid=${config.openWeather.appKey}&units=metric&q={city}
+
+
