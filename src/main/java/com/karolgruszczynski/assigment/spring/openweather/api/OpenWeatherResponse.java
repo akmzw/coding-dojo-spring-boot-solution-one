@@ -9,20 +9,6 @@ import java.util.List;
 import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-        "coord",
-        "weather",
-        "base",
-        "main",
-        "visibility",
-        "wind",
-        "clouds",
-        "dt",
-        "sys",
-        "id",
-        "name",
-        "cod"
-})
 @ToString
 public class OpenWeatherResponse {
 

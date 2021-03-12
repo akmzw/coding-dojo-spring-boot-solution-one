@@ -21,9 +21,7 @@ public class OpenWeatherService {
 
     public OpenWeatherResponse fetchWeather(String city) {
 
-        Logger.info(apiUrl);
         ResponseEntity<OpenWeatherResponse> response = restTemplate.getForEntity(apiUrl, OpenWeatherResponse.class, city);
-
         return response.getBody();
     }
 }

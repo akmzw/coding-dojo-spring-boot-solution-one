@@ -21,6 +21,7 @@ public class WeatherService {
     }
 
     public ResponseEntity<String> fetchWeatherForCityAndSave(String city) {
+      //TODO: Improve error handling
         try {
             LOGGER.trace("Fetching weather for '{}' ", city);
             OpenWeatherResponse openWeatherResponse = openWeatherService.fetchWeather(city);

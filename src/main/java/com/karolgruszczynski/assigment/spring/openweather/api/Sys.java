@@ -2,19 +2,13 @@
 package com.karolgruszczynski.assigment.spring.openweather.api;
 
 import com.fasterxml.jackson.annotation.*;
+import lombok.ToString;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-        "type",
-        "id",
-        "message",
-        "country",
-        "sunrise",
-        "sunset"
-})
+@ToString
 public class Sys {
 
     @JsonProperty("type")
